@@ -1,0 +1,11 @@
+{
+    "name": "MQTT-RPC module",
+    "description":"Nodejs module for creating rpc client/servers through mqtt.",
+    "url":"http://www.CompanyName.com/",
+    "logo":"http://CompanyName/images/picture.png",
+    "version":"0.0.0",
+    "options":{
+	"outdir": "./api_docs",
+	"exclude": "node_modules,api_docs,build,docs,src"
+    }
+}

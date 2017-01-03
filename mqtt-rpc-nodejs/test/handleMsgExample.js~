@@ -1,0 +1,14 @@
+'use strict'
+
+var mqtt = require('mqtt');
+var client = mqtt.connect();
+
+var client = mqtt.Client();
+
+client.handleMessage = function(packet,callback){
+    console.log('sup');
+    callback();
+};
+
+client.subscribe('test');
+

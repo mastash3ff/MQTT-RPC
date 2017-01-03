@@ -1,0 +1,21 @@
+import sys
+import paho.mqtt.client as mqtt
+import json
+
+topic = "CalculatorService/add"
+
+def on_message(mosq,obj,msg):
+    print 'msg payload-> ', msg.payload
+    print 'msg topic  -> ', msg.topic
+    #message = json.dumps(msg.payload)
+    #print'message-> ', message
+    print('type',type(msg.payload))
+    
+mqttClient = mqtt.Client()
+        
+mqttClient.message_callback_add(topic, on_message)
+mqttClient.connect('localhost',1883)
+mqttClient.subscribe(topic, 0)
+
+mqttClient.loop_forever()
+        

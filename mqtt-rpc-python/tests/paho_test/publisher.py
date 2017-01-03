@@ -1,0 +1,9 @@
+
+import paho.mqtt.client as mqtt
+
+mqttc = mqtt.Client()
+
+#option to reinitialise
+mqttc.connect("localhost")
+mqttc.publish("test","sup")
+mqttc.disconnect()
